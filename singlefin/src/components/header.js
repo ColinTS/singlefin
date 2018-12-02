@@ -1,32 +1,23 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import HeaderImage from '../images/header.svg'
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <div
     style={{
       background: 'rebeccapurple',
       marginBottom: '1.45rem',
     }}
   >
-    <div
+    {/* <div
       style={{
         margin: '0 auto',
         maxWidth: 960,
         padding: '1.45rem 1.0875rem',
       }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+    /> */}
+    <HeaderImage />
   </div>
 )
 
