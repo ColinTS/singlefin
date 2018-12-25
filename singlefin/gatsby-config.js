@@ -1,3 +1,6 @@
+let env = process.env.NODE_ENV || 'development'
+require('dotenv').config({ path: `./.env.${env}` })
+
 module.exports = {
   siteMetadata: {
     title: 'Singlefin',
@@ -29,6 +32,13 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       rule: {
         include: /images/,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `${process.env.CONTENTFUL_ID}`,
+        accessToken: `${process.env.CONTENTFUL_TOKEN}`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
