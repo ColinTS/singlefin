@@ -1,6 +1,12 @@
 let env = process.env.NODE_ENV || 'development'
 require('dotenv').config({ path: `./.env.${env}` })
 
+const theme = {
+  fontSize: 16,
+  fontFamily: 'Roboto',
+  color: '#212121',
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Singlefin',
@@ -41,7 +47,10 @@ module.exports = {
         accessToken: `${process.env.CONTENTFUL_TOKEN}`,
       },
     },
-    `gatsby-plugin-jss`,
+    {
+      resolve: 'jss',
+      options: { theme },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
