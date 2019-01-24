@@ -48,7 +48,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'jss',
+      resolve: `gatsby-plugin-jss`,
       options: { theme },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

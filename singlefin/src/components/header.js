@@ -3,19 +3,29 @@ import HeaderImage from '../images/header.svg'
 import injectSheet from 'react-jss'
 
 const styles = theme => ({
-  text: {
+  headerContent: {
+    position: 'absolute',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  logo: {
     color: 'green',
     fontSize: 22,
     position: 'absolute',
-    top: '25px',
-    left: '20px',
+    top: '-60px',
+    paddingLeft: '50px',
+  },
+  links: {
+    color: 'green',
+    fontSize: 22,
+    position: 'absolute',
+    top: '-60px',
+    paddingRight: '50px',
   },
   header: {
     position: 'relative',
-  },
-  links: {
-    width: 300,
-    height: 200,
+    overflowX: 'hidden',
   },
 })
 
@@ -24,8 +34,9 @@ const Header = ({ classes }) => (
     <div className={classes.header}>
       <HeaderImage />
     </div>
-    <div className={classes.links}>
-      <p className={classes.text}>Hey</p>
+    <div className={classes.headerContent}>
+      <p className={classes.logo}>Logo</p>
+      <p className={classes.links}>links</p>
     </div>
   </div>
 )
