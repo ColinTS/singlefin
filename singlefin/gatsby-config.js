@@ -2,9 +2,11 @@ let env = process.env.NODE_ENV || 'development'
 require('dotenv').config({ path: `./.env.${env}` })
 
 const theme = {
-  fontSize: 16,
-  fontFamily: 'Roboto',
-  color: '#212121',
+  logo: {
+    fontSize: 36,
+    fontFamily: 'Roboto',
+    fontColor: 'green',
+  },
 }
 
 module.exports = {

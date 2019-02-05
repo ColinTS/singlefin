@@ -10,17 +10,19 @@ const styles = theme => ({
     justifyContent: 'center',
   },
   logo: {
-    color: 'green',
-    fontSize: 22,
+    color: theme.logo.fontColor,
+    fontSize: theme.logo.fontSize,
+    fontFamily: theme.logo.fontFamily,
     position: 'absolute',
-    top: '-60px',
+    top: '-66px',
     paddingLeft: '50px',
   },
   links: {
-    color: 'green',
-    fontSize: 22,
+    color: theme.logo.fontColor,
+    fontSize: theme.logo.fontSize,
+    fontFamily: theme.logo.fontFamily,
     position: 'absolute',
-    top: '-60px',
+    top: '-66px',
     paddingRight: '50px',
   },
   header: {
@@ -35,8 +37,20 @@ const Header = ({ classes }) => (
       <HeaderImage />
     </div>
     <div className={classes.headerContent}>
-      <p className={classes.logo}>Logo</p>
-      <p className={classes.links}>links</p>
+      <div style={{ width: '50%' }}>
+        <p className={classes.logo}>Logo</p>
+      </div>
+      <div
+        style={{
+          width: '50%',
+          display: 'flex',
+          borderStyle: 'solid',
+          borderWidth: '5px',
+          justifyContent: 'flex-end',
+        }}
+      >
+        <p className={classes.links}>links</p>
+      </div>
     </div>
   </div>
 )
